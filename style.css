@@ -1,0 +1,174 @@
+
+		body {
+			font-family: "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+/*			background: radial-gradient(circle, #7dc387, #b2cdea);  gradient */
+			
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+
+        }
+
+        header {
+            background-color: #394162;
+            color: #fff;
+            padding: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+		footer {
+			background-color: #394162;
+			color: #fff;
+			text-align: center;
+			padding: 1px;
+			position: sticky;
+          	bottom: 0;
+		}
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            position: relative;
+            animation: slide-in 1.9s ease-out forwards;
+            transform: translateX(-100%);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+		main {
+			max-width: 800px;
+			margin: 20px auto;
+			padding: 0 20px;
+			display: flex;
+			flex-wrap: wrap; /* Wrap to next row if necessary */
+			justify-content: space-between; /* Distribute space evenly between posts */
+			flex-grow: 1;
+		}
+
+	section.blog-post {
+		width: calc(33.33% - 20px); /* Adjust the width for 3 columns with spacing */
+		margin-bottom: 30px;
+		padding: 20px;
+		border: 1px solid #ddd;
+		background-color: #f7f7f7;
+		box-sizing: border-box;
+	}
+
+        section.blog-post h2 {
+            font-size: 24px;
+            margin-top: 0;
+            color: #333;
+        }
+
+        section.blog-post p {
+            line-height: 1.5;
+            color: #666;
+        }
+
+        .custom-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Remove default link styles */
+        .custom-link:hover,
+        .custom-link:active,
+        .custom-link:focus {
+            text-decoration: none;
+            color: inherit;
+            outline: none;
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+/*ABOUT ME PAGE*/
+
+		.about-me {
+			margin: 20px 0;
+			padding: 20px;
+			font-family: "Playfair Display"
+		}
+
+		.about-me h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		.about-me p {
+			font-size: 16px;
+		}
+
+		.social-links {
+			margin-top: 20px;
+		}
+
+		.social-links a {
+			display: inline-block;
+			margin-right: 10px;
+			text-decoration: none;
+			color: #007bff;
+		}
+
+		/* Add responsive styles for smaller screens */
+		@media screen and (max-width: 768px) {
+			.about-me {
+				padding: 10px; /* Decrease padding for smaller screens */
+			}
+
+			.about-me h2 {
+				font-size: 20px; /* Reduce font size for smaller screens */
+			}
+		}
+
+
+
+/* Define the animation keyframes for the .animated-heading-2 element */
+@keyframes appear-2 {
+    0% {
+        opacity: 0; /* Start with zero opacity (invisible) */
+        transform: translateY(-10px); /* Move the text up slightly */
+    }
+    100% {
+        opacity: 1; /* End with full opacity (visible) */
+        transform: translateY(0); /* Return to its original position */
+    }
+}
+
+/* Apply the animation to the .animated-heading-2 element */
+.animated-heading-2 {
+    animation: appear-2 3s ease-out forwards; /* Start the animation */
+}
+
+
+.homepage-content {
+	text-align: center;
+}
+
+
