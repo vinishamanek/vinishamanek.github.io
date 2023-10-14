@@ -1,4 +1,5 @@
 /* Base styles for all screen sizes */
+
 body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     margin: 0;
@@ -10,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #394162;
+    /* background-color: #394162; */
     color: #fff;
     padding: 14px;
     text-align: center;
@@ -20,7 +21,7 @@ header {
 }
 
 footer {
-    background-color: #394162;
+    /* background-color: #394162; */
     color: #fff;
     text-align: center;
     padding: 14px;
@@ -145,4 +146,19 @@ section.blog-post p {
     .social-links {
         margin-top: 10px;
     }
+}
+
+.under-construction {
+    text-align: center;
+    margin: 50px;
+}
+
+.under-construction h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.under-construction p {
+    font-size: 18px;
+    color: #666;
 }

@@ -71,10 +71,9 @@
 		<h2>
 		<nav>
             <ul>
-                <li><a href="#concert.html">concerts</a></li>
-                <li><a href="#project.html">projects</a></li>
-                <li><a href="#montreal.html">montreal</a></li>
-                <li><a href="#aboutme.html">about me</a></li>
+                <li><a href="concert.html">concerts</a></li>
+                <li><a href="project.html">projects</a></li>
+                <li><a href="aboutme.html">about me</a></li>
             </ul>
         </nav>
 		</h2>
@@ -96,148 +95,6 @@
     });
 </script>
 </body>
-	
-	<!-- <script>
-    const headingContainer = document.querySelector(".animated-heading-container-main");
-    const headingsLeftRight = document.querySelectorAll(".animated-heading-leftright");
-    const headingsRightLeft = document.querySelectorAll(".animated-heading-rightleft");
-
-    setInterval(() => {
-        // Clone and append the headings for left to right animation
-        headingsLeftRight.forEach((heading) => {
-            const clone = heading.cloneNode(true);
-            headingContainer.appendChild(clone);
-        });
-
-        // Clone and append the headings for right to left animation
-        headingsRightLeft.forEach((heading) => {
-            const clone = heading.cloneNode(true);
-            headingContainer.appendChild(clone);
-        });
-    }, 30000000000000000000); // Adjust the interval as needed
-</script> -->
 
 </html>
 
-
-
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Homepage</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1 class="animated-heading">
-            <a class="custom-link" href="blog.html">vini's space</a>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="blog.html">home</a></li>
-                <li><a href="concerts.html">concerts</a></li>
-                <li><a href="project.html">projects</a></li>
-                <li><a href="montreal.html">montreal</a></li>
-                <li><a href="aboutme.html">about me</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="about-me">
-            <h2>Who is Vini?</h2>
-            <p>I'm 20 years old, living in Montreal, Canada. I'm in my second year of studies in software engineering at Concordia University. I love concerts and music in general.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/vinishamanek" target="_blank">instagram</a>
-                <a href="https://www.linkedin.com/in/vinishamanek" target="_blank">linkedin</a>
-                <a href="https://open.spotify.com/user/vinishafromexo" target="_blank">spotify</a>
-            </div>
-        </section>
-     </main>
-    <script>
-        var header = document.querySelector("header");
-        var isHeaderSticky = false;
-
-        window.onscroll = function() {
-            var scrollY = window.pageYOffset;
-            
-            if (scrollY > 50 && !isHeaderSticky) {
-                header.style.transform = "translateY(-100%)";
-                setTimeout(function() {
-                    header.style.transition = "transform 0.5s ease";
-                    header.style.transform = "translateY(0)";
-                    isHeaderSticky = true;
-                }, 100);
-            } else if (scrollY <= 50 && isHeaderSticky) {
-                header.style.transition = "none";
-                header.style.transform = "translateY(-100%)";
-                isHeaderSticky = false;
-            }
-        };
-    </script>
-</body>
-</html>
--->
-
-
-<!--
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinisha Manek</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-      <h1 class="animated-heading">
-            <a class="custom-link" href="blog.html">vini's space</a>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="blog.html">home</a></li>
-                <li><a href="concerts.html">concerts</a></li>
-                <li><a href="project.html">projects</a></li>
-                <li><a href="montreal.html">montreal</a></li>
-                <li><a href="aboutme.html">about me</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-		<h2 class="section.blog-post">
-    
-			<h2 class="animated-heading-2">welcome to vini's space, founded in 2023</h2>
-			
-			whether you're here to browse through concerts i've been to lately, keep up with my new projects, 
-		</h2>
-</main>
-
-
-    <script>
-        window.onscroll = function() { stickHeaderToTop() };
-
-        var header = document.querySelector("header");
-        var sticky = header.offsetTop;
-
-        function stickHeaderToTop() {
-            if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
-        }
-    </script>
-	<footer>
-        <p>&copy; 2023 vinisha manek</p>
-    </footer>
-</body>
-</html>
--->

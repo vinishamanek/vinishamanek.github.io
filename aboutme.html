@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinisha Manek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="animated-heading">
+            <a class="custom-link" href="blog.html">vini's space</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="concerts.html">concerts</a></li>
+                <li><a href="project.html">projects</a></li>
+                <li><a href="aboutme.html">about me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-me">
+            <!-- <h2>Who is Vini?</h2>
+            <p>I'm 20 years old, living in Montreal, Canada. I'm in my second year of studies in software engineering at Concordia University. I love concerts and music in general.</p> -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/vinishamanek" target="_blank">instagram</a>
+                <a href="https://www.linkedin.com/in/vinishamanek" target="_blank">linkedin</a>
+                <a href="https://open.spotify.com/user/vinishafromexo" target="_blank">spotify</a>
+            </div>
+        </section>
+     </main>
+
+   <script>
+        window.onscroll = function() { stickHeaderToTop() };
+
+        var header = document.querySelector("header");
+        var sticky = header.offsetTop;
+
+        function stickHeaderToTop() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+	<footer>
+        <p>&copy; 2023 vinisha manek</p>
+    </footer>
+</body>
+	
+	
+	

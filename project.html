@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinisha Manek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="animated-heading">
+            <a class="custom-link" href="blog.html">vini's space</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="concert.html">concerts</a></li>
+                <li><a href="project.html">projects</a></li>
+                <li><a href="aboutme.html">about me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  
+        <div class="under-construction">
+            <h2>Under Construction</h2>
+            <p>We are currently working on this page. Please check back later.</p>
+        </div>
+   
+
+
+    <script>
+        window.onscroll = function() { stickHeaderToTop() };
+
+        var header = document.querySelector("header");
+        var sticky = header.offsetTop;
+
+        function stickHeaderToTop() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+	<footer>
+        <p>&copy; 2023 vinisha manek</p>
+    </footer>
+</body>
+</html>
