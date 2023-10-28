@@ -1,100 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vini's space</title>
-	<link rel="stylesheet" href="style.css">
+// <!-- <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>vini's space</title>
+// 	<link rel="stylesheet" href="style.css">
 
-    <style>
-        body {
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #c0c3b0;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow: hidden; /* Prevent horizontal scrollbar */
-        }
+//     <style>
+//         body {
+//             font-family: "Helvetica Neue", Arial, sans-serif;
+//             margin: 0;
+//             padding: 0;
+//             background-color: #c0c3b0;
+//             display: flex;
+//             flex-direction: row;
+//             justify-content: center;
+//             align-items: center;
+//             min-height: 100vh;
+//             overflow: hidden; /* Prevent horizontal scrollbar */
+//         }
 
-        .animated-heading-container-main {
-            white-space: nowrap;
-            overflow: hidden;
-            width: 100%;
-        }
+//         .animated-heading-container-main {
+//             white-space: nowrap;
+//             overflow: hidden;
+//             width: 100%;
+//         }
 
-        .animated-heading-leftright {
-            font-size: 40px;
-            display: inline-block;
-            margin-right: 30px; /* Add spacing between the text elements */
-            animation: moveLeftRight 8s linear infinite; /* Adjust the animation duration as needed */
-        }
+//         .animated-heading-leftright {
+//             font-size: 40px;
+//             display: inline-block;
+//             margin-right: 30px; /* Add spacing between the text elements */
+//             animation: moveLeftRight 8s linear infinite; /* Adjust the animation duration as needed */
+//         }
 		
-		.animated-heading-rightleft {
-            font-size: 40px;
-            display: inline-block;
-            margin-right: 30px; /* Add spacing between the text elements */
-            animation: moveRightLeft 8s linear infinite; /* Adjust the animation duration as needed */
-        }
+// 		.animated-heading-rightleft {
+//             font-size: 40px;
+//             display: inline-block;
+//             margin-right: 30px; /* Add spacing between the text elements */
+//             animation: moveRightLeft 8s linear infinite; /* Adjust the animation duration as needed */
+//         }
 
 
-        @keyframes moveLeftRight {
-            0% {
-                transform: translateX(-300%);
-            }
-            100% {
-                transform: translateX(300%); 
-            }
-        }
+//         @keyframes moveLeftRight {
+//             0% {
+//                 transform: translateX(-300%);
+//             }
+//             100% {
+//                 transform: translateX(300%); 
+//             }
+//         }
 		
-		@keyframes moveRightLeft {
-            0% {
-                transform: translateX(300%);
-            }
-            100% {
-                transform: translateX(-300%); 
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="animated-heading-container-main">
-        <h1 class="animated-heading-leftright">vini's space</h1>
-        <h1 class="animated-heading-leftright">vini's space</h1>
-        <h1 class="animated-heading-leftright">vini's space</h1>
-        <h1 class="animated-heading-leftright">vini's space</h1>
-        <h1 class="animated-heading-leftright">vini's space</h1>
-        <h1 class="animated-heading-leftright">vini's space</h1>
-		<h2>
-		<nav>
-            <ul>
-                <li><a href="concert.html">concerts</a></li>
-                <li><a href="project.html">projects</a></li>
-                <li><a href="aboutme.html">about me</a></li>
-            </ul>
+// 		@keyframes moveRightLeft {
+//             0% {
+//                 transform: translateX(300%);
+//             }
+//             100% {
+//                 transform: translateX(-300%); 
+//             }
+//         }
+//     </style>
+// </head>
+// <body>
+//     <div class="animated-heading-container-main">
+//         <h1 class="animated-heading-leftright">vini's space</h1>
+//         <h1 class="animated-heading-leftright">vini's space</h1>
+//         <h1 class="animated-heading-leftright">vini's space</h1>
+//         <h1 class="animated-heading-leftright">vini's space</h1>
+//         <h1 class="animated-heading-leftright">vini's space</h1>
+//         <h1 class="animated-heading-leftright">vini's space</h1>
+// 		<h2>
+// 		<nav>
+//             <ul>
+//                 <li><a href="concert.html">concerts</a></li>
+//                 <li><a href="project.html">projects</a></li>
+//                 <li><a href="aboutme.html">about me</a></li>
+//             </ul>
+//         </nav>
+// 		</h2>
+// 		<h1 class="animated-heading-rightleft">vini's space</h1>
+// 		<h1 class="animated-heading-rightleft">vini's space</h1>
+// 		<h1 class="animated-heading-rightleft">vini's space</h1>
+// 		<h1 class="animated-heading-rightleft">vini's space</h1>
+// 		<h1 class="animated-heading-rightleft">vini's space</h1>
+// 		<h1 class="animated-heading-rightleft">vini's space</h1>
+//     </div>
+// 	 <script>
+//     const headingContainer = document.querySelector(".animated-heading-container-main");
+//     const originalHeadings = document.querySelectorAll(".animated-heading");
+
+//     // Clone and append the headings for left to right animation
+//     originalHeadings.forEach((heading) => {
+//         const clone = heading.cloneNode(true);
+//         headingContainer.appendChild(clone);
+//     });
+// </script>
+// </body>
+
+// </html> -->
+
+
+import React from 'react';
+import './AnimatedHeadings.css';
+
+const AnimatedHeadings = () => {
+  return (
+    <div className="animated-heading-container-main">
+      <h1 className="animated-heading-leftright">vini's space</h1>
+      <h1 className="animated-heading-leftright">vini's space</h1>
+      <h1 className="animated-heading-leftright">vini's space</h1>
+      <h1 className="animated-heading-leftright">vini's space</h1>
+      <h1 className="animated-heading-leftright">vini's space</h1>
+      <h1 className="animated-heading-leftright">vini's space</h1>
+      <h2>
+        <nav>
+          <ul>
+            <li><a href="concert.html">concerts</a></li>
+            <li><a href="project.html">projects</a></li>
+            <li><a href="aboutme.html">about me</a></li>
+          </ul>
         </nav>
-		</h2>
-		<h1 class="animated-heading-rightleft">vini's space</h1>
-		<h1 class="animated-heading-rightleft">vini's space</h1>
-		<h1 class="animated-heading-rightleft">vini's space</h1>
-		<h1 class="animated-heading-rightleft">vini's space</h1>
-		<h1 class="animated-heading-rightleft">vini's space</h1>
-		<h1 class="animated-heading-rightleft">vini's space</h1>
+      </h2>
+      <h1 className="animated-heading-rightleft">vini's space</h1>
+      <h1 className="animated-heading-rightleft">vini's space</h1>
+      <h1 className="animated-heading-rightleft">vini's space</h1>
+      <h1 className="animated-heading-rightleft">vini's space</h1>
+      <h1 className="animated-heading-rightleft">vini's space</h1>
+      <h1 className="animated-heading-rightleft">vini's space</h1>
     </div>
-	 <script>
-    const headingContainer = document.querySelector(".animated-heading-container-main");
-    const originalHeadings = document.querySelectorAll(".animated-heading");
+  );
+};
 
-    // Clone and append the headings for left to right animation
-    originalHeadings.forEach((heading) => {
-        const clone = heading.cloneNode(true);
-        headingContainer.appendChild(clone);
-    });
-</script>
-</body>
-
-</html>
-
+export default AnimatedHeadings;
