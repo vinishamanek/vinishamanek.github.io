@@ -1,164 +1,85 @@
-/* Base styles for all screen sizes */
+        body {
+            background-color: white;
+            color: #212121;
+            font-weight: bold;
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
 
-body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: radial-gradient(circle, #7dc387, #b2cdea);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+        .header {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            height: 10%; /* Set the header height */
+        }
 
-header {
-    /* background-color: #394162; */
-    color: #fff;
-    padding: 14px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+        #exoplus-container {
+            display: inline-block;
+            position: relative;
+        }
 
-footer {
-    /* background-color: #394162; */
-    color: #fff;
-    text-align: center;
-    padding: 14px;
-    position: sticky;
-    bottom: 0;
-}
+        #exoplus {
+            font-size: 4vw;
+            color: black;
+            padding: 10px;
+            text-decoration: none; /* Remove default underline */
+        }
 
-h1 {
-    margin: 0;
-    font-size: 28px;
-    position: relative;
-    animation: slide-in 1.9s ease-out forwards;
-    transform: translateX(-100%);
-}
+        .language {
+            font-size: 1.5vw;
+            color: black;
+            padding: 10px;
+        }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
+        .menu-container {
+            display: flex;
+            flex: 1;
+        }
 
-nav ul li {
-    margin: 0 10px;
-}
+        .menu {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            background-color: white;
+            color: black;
+            padding: 20px;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-}
+        .main-content {
+            display: flex;
+            flex: 1;
+            background-color: white;
+            color: black;
+            padding: 20px;
+        }
 
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+        .link {
+            text-decoration: none;
+            font-size: 1.5vw;
+            padding: 10px;
+            color: black;
+            transition: color 0.3s;
+        }
 
-section.blog-post {
-    width: calc(33.33% - 20px);
-    margin-bottom: 30px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #f7f7f7;
-    box-sizing: border-box;
-}
+        .link:hover {
+            color: #ec6644;
+        }
 
-section.blog-post h2 {
-    font-size: 24px;
-    margin-top: 0;
-    color: #333;
-}
+        .menu a:active, .menu a:focus, .menu .current-link {
+            color: #ec6644;
+        }
 
-section.blog-post p {
-    line-height: 1.5;
-    color: #666;
-}
+        .footer {
+            font-size: small;
+            background-color: white;
+            padding: 30px;
+            color: black;
+            text-align: center;
+        }
 
-.custom-link {
-    text-decoration: none;
-    color: inherit;
-}
-
-.custom-link:hover,
-.custom-link:active,
-.custom-link:focus {
-    text-decoration: none;
-    color: inherit;
-    outline: none;
-}
-
-@keyframes slide-in {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-/* ABOUT ME PAGE */
-
-.about-me {
-    margin: 20px 0;
-    padding: 20px;
-    font-family: "Playfair Display";
-}
-
-.about-me h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.about-me p {
-    font-size: 16px;
-}
-
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
-    display: inline-block;
-    margin-right: 10px;
-    text-decoration: none;
-    color: #007bff;
-}
-
-/* Add responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 24px;
-    }
-
-    section.blog-post {
-        width: 100%; /* Make blog posts take full width on smaller screens */
-    }
-
-    .social-links {
-        margin-top: 10px;
-    }
-}
-
-.under-construction {
-    text-align: center;
-    margin: 50px;
-}
-
-.under-construction h1 {
-    font-size: 36px;
-    color: #333;
-}
-
-.under-construction p {
-    font-size: 18px;
-    color: #666;
-}

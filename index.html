@@ -1,133 +1,104 @@
-// <!-- <!DOCTYPE html>
-// <html lang="en">
-// <head>
-//     <meta charset="UTF-8">
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//     <title>vini's space</title>
-// 	<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Exoplus Website">
+    <meta name="author" content="Vinisha Manek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exoplus</title>
 
-//     <style>
-//         body {
-//             font-family: "Helvetica Neue", Arial, sans-serif;
-//             margin: 0;
-//             padding: 0;
-//             background-color: #c0c3b0;
-//             display: flex;
-//             flex-direction: row;
-//             justify-content: center;
-//             align-items: center;
-//             min-height: 100vh;
-//             overflow: hidden; /* Prevent horizontal scrollbar */
-//         }
+    <style>
+        body {
+            background-color: white;
+            color: #212121;
+            font-weight: bold;
+            text-align: center;
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-//         .animated-heading-container-main {
-//             white-space: nowrap;
-//             overflow: hidden;
-//             width: 100%;
-//         }
+        h1 {
+            font-size: 4vw;
+            position: absolute;
+            opacity: 1;
+            transform: translateY(0vh); /* Rise a bit less high */
+            transition: transform 1.5s; /* Rise to the final position in 1.5 seconds */
+        }
 
-//         .animated-heading-leftright {
-//             font-size: 40px;
-//             display: inline-block;
-//             margin-right: 30px; /* Add spacing between the text elements */
-//             animation: moveLeftRight 8s linear infinite; /* Adjust the animation duration as needed */
-//         }
-		
-// 		.animated-heading-rightleft {
-//             font-size: 40px;
-//             display: inline-block;
-//             margin-right: 30px; /* Add spacing between the text elements */
-//             animation: moveRightLeft 8s linear infinite; /* Adjust the animation duration as needed */
-//         }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            opacity: 0; /* Initially hide the links */
+            transition: opacity 0.4s; /* Add a fade-in effect */
+        }
 
+        nav li {
+            margin: 0.8vw 0; /* Reduce the margin between links */
+        }
 
-//         @keyframes moveLeftRight {
-//             0% {
-//                 transform: translateX(-300%);
-//             }
-//             100% {
-//                 transform: translateX(300%); 
-//             }
-//         }
-		
-// 		@keyframes moveRightLeft {
-//             0% {
-//                 transform: translateX(300%);
-//             }
-//             100% {
-//                 transform: translateX(-300%); 
-//             }
-//         }
-//     </style>
-// </head>
-// <body>
-//     <div class="animated-heading-container-main">
-//         <h1 class="animated-heading-leftright">vini's space</h1>
-//         <h1 class="animated-heading-leftright">vini's space</h1>
-//         <h1 class="animated-heading-leftright">vini's space</h1>
-//         <h1 class="animated-heading-leftright">vini's space</h1>
-//         <h1 class="animated-heading-leftright">vini's space</h1>
-//         <h1 class="animated-heading-leftright">vini's space</h1>
-// 		<h2>
-// 		<nav>
-//             <ul>
-//                 <li><a href="concert.html">concerts</a></li>
-//                 <li><a href="project.html">projects</a></li>
-//                 <li><a href="aboutme.html">about me</a></li>
-//             </ul>
-//         </nav>
-// 		</h2>
-// 		<h1 class="animated-heading-rightleft">vini's space</h1>
-// 		<h1 class="animated-heading-rightleft">vini's space</h1>
-// 		<h1 class="animated-heading-rightleft">vini's space</h1>
-// 		<h1 class="animated-heading-rightleft">vini's space</h1>
-// 		<h1 class="animated-heading-rightleft">vini's space</h1>
-// 		<h1 class="animated-heading-rightleft">vini's space</h1>
-//     </div>
-// 	 <script>
-//     const headingContainer = document.querySelector(".animated-heading-container-main");
-//     const originalHeadings = document.querySelectorAll(".animated-heading");
+        nav a {
+            text-decoration: none;
+            color: #212121;
+            font-size: 2vw; /* Make the links a bit bigger */
+            transition: color 0.3s; /* Add a transition for smooth color change */
+        }
 
-//     // Clone and append the headings for left to right animation
-//     originalHeadings.forEach((heading) => {
-//         const clone = heading.cloneNode(true);
-//         headingContainer.appendChild(clone);
-//     });
-// </script>
-// </body>
-
-// </html> -->
-
-
-import React from 'react';
-import './AnimatedHeadings.css';
-
-const AnimatedHeadings = () => {
-  return (
-    <div className="animated-heading-container-main">
-      <h1 className="animated-heading-leftright">vini's space</h1>
-      <h1 className="animated-heading-leftright">vini's space</h1>
-      <h1 className="animated-heading-leftright">vini's space</h1>
-      <h1 className="animated-heading-leftright">vini's space</h1>
-      <h1 className="animated-heading-leftright">vini's space</h1>
-      <h1 className="animated-heading-leftright">vini's space</h1>
-      <h2>
-        <nav>
-          <ul>
-            <li><a href="concert.html">concerts</a></li>
-            <li><a href="project.html">projects</a></li>
-            <li><a href="aboutme.html">about me</a></li>
-          </ul>
-        </nav>
-      </h2>
-      <h1 className="animated-heading-rightleft">vini's space</h1>
-      <h1 className="animated-heading-rightleft">vini's space</h1>
-      <h1 className="animated-heading-rightleft">vini's space</h1>
-      <h1 className="animated-heading-rightleft">vini's space</h1>
-      <h1 className="animated-heading-rightleft">vini's space</h1>
-      <h1 className="animated-heading-rightleft">vini's space</h1>
+        #language {
+            margin-top: 1vw; /* Reduce the margin between links and language buttons */
+            opacity: 0; /* Initially hide the language buttons */
+            transition: opacity 0.4s; /* Add a fade-in effect */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="exoplus">EXOPLUS</h1>
+    <nav>
+        <ul>
+            <li><a id="aboutLink" href="about.html">ABOUT</a></li>
+            <li><a id="storeLink" href="store.html">STORE</a></li>
+            <li><a id="brandsLink" href="brands.html">BRANDS</a></li>
+            <li><a id="contactLink" href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+    <div id="language"> <br>
+        en | fr
     </div>
-  );
-};
 
-export default AnimatedHeadings;
+    <script>
+        // Wait for the page to load before revealing the content
+        window.addEventListener("load", () => {
+            const exoplus = document.getElementById("exoplus");
+            const navLinks = document.querySelector("nav ul"); // Updated to select the ul element inside nav
+            const language = document.getElementById("language");
+            const navLinksArray = navLinks.getElementsByTagName("a");
+
+            setTimeout(() => {
+                exoplus.style.transform = "translateY(-25vh)"; // Rise a bit less high
+            }, 1000); // Start rising immediately
+
+            exoplus.addEventListener("transitionend", () => {
+                // Animation is complete, reveal the links and language buttons
+                navLinks.style.opacity = 1;
+                language.style.opacity = 1;
+
+                // Change link color to orange on hover
+                for (let i = 0; i < navLinksArray.length; i++) {
+                    navLinksArray[i].addEventListener("mouseenter", () => {
+                        navLinksArray[i].style.color = "#ec6644";
+                    });
+
+                    navLinksArray[i].addEventListener("mouseleave", () => {
+                        navLinksArray[i].style.color = "#212121";
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
