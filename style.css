@@ -1,8 +1,9 @@
         body {
             background-color: white;
             color: #212121;
-            font-weight: bold;
-            font-family: Verdana, sans-serif;
+            font-family: neue-haas-grotesk-display, sans-serif;
+            font-style: normal;
+            font-weight: 700;           
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -75,11 +76,30 @@
             color: #ec6644;
         }
 
-        .footer {
-            font-size: small;
-            background-color: white;
-            padding: 30px;
-            color: black;
-            text-align: center;
+       .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            font-family: neue-haas-grotesk-display, sans-serif;
+            font-style: normal;
+            font-weight: 500;
         }
+        
+        .footer-section {
+            margin: 0 20px; /* Add margin to separate sections */
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background: #fff; /* Change the color and styling of the horizontal line */
+            width: 50%; /* Adjust the width of the line as needed */
+        }
+        
 
+
+
+/*  */
