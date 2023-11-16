@@ -16,8 +16,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            height: 10%; /* Set the header height */
+            padding: 5px;
+            height: 10%; 
+            border-bottom: 1px solid #9b9999;
+            padding-bottom: 10px;
         }
 
         #exoplus-container {
@@ -33,9 +35,10 @@
         }
 
         .language {
-            font-size: 1.5vw;
+            font-size: 15px;
             color: black;
             padding: 10px;
+            padding-right: 20px;
         }
 
         .menu-container {
@@ -60,9 +63,81 @@
             padding: 20px;
         }
 
+        .contact-form {
+            font-family: neue-haas-grotesk-display, sans-serif;
+            font-weight: 300; 
+            width: 90%;     
+
+        }
+
+        /* Set a default width for the resizable input elements */
+        #name,
+        #email,
+        #phone {
+            font-family: neue-haas-grotesk-display, sans-serif;
+            font-weight: 300;  
+            min-width: 300px;
+            width: 100%;             
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        /* Make the textarea scrollable and non-resizable */
+        #message {
+            font-family: neue-haas-grotesk-display, sans-serif;
+            font-weight: 300;
+            width: 100%; 
+            min-width: 300px;       
+            height: 100px; /* Set a fixed height */
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            resize: none;
+            overflow-y: scroll; /* Enable vertical scrolling */
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+
+        .close-button {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        #drop-area {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #drop-area.drag-over {
+            border-color: #007bff; /* Highlight the drop area when dragging over */
+        }
+
+        .submit-link {
+            font-family: neue-haas-grotesk-display, sans-serif;
+            font-weight: 300;           
+            color: black;
+            text-decoration: none;
+        }
+
+        .submit-link:hover {
+            color: #ec6644;
+        }
         .link {
             text-decoration: none;
-            font-size: 1.5vw;
+            /* font-size: 1.5vw; */
+
+            /* @media only screen and (max-width: 600px) { */
+                font-size: 18px;
+            /* } */
+
             padding: 10px;
             color: black;
             transition: color 0.3s;
@@ -77,8 +152,8 @@
         }
 
        .footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #fff;
+            color: #333;
             padding: 20px 0;
             display: flex;
             justify-content: center; /* Center the content horizontally */
@@ -86,6 +161,8 @@
             font-family: neue-haas-grotesk-display, sans-serif;
             font-style: normal;
             font-weight: 500;
+            border-top: 1px solid #9b9999;
+            padding-top: 10px;
         }
         
         .footer-section {
@@ -100,6 +177,3 @@
         }
         
 
-
-
-/*  */

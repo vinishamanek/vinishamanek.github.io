@@ -22,11 +22,35 @@
             <a class="link" href="about.html" >ABOUT</a>
             <a class="link" href="store.html">STORE</a>
             <a class="link" href="brands.html">BRANDS</a>
-            <a class="link current-link" href="contact.html">CONTACT</a>
+            <a class="link current-link" href="contact.html">CONTACT US</a>
         </div>
 
         <div class="main-content">
-            add content for contact. 
+
+            <div class="contact-form">
+               <b>CONTACT US</b> 
+                <br><br>
+                
+                <form id="contactForm" enctype="multipart/form-data">
+                    <input type="text" id="name" name="name" placeholder="Name" required><br>
+        
+                    <input type="email" id="email" name="email" placeholder="Email Address" required><br>
+        
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number"><br>
+        
+                    <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea><br>
+        
+                    <label for="attachments">Attachments:</label>
+                    <div id="drop-area" ondrop="handleDrop(event)" ondragover="handleDragOver(event)">
+                        Drop files here or click to select
+                        <input type="file" id="attachments" name="attachments" accept=".pdf, .mp4, .mov, .jpg, .jpeg, .png" multiple>
+                    </div>
+                    <p id="file-list"></p>
+
+                    <a href="#" onclick="submitForm()" class="submit-link"><b>SEND</b></a>
+                </form>                
+            </div>
+
         </div>
     </div>
 
@@ -37,3 +61,97 @@
    
 </body>
 </html>
+
+<!-- js for submit form to send email -->
+<!-- 
+function submitForm() {
+    // You can add client-side validation here if needed
+
+    // Get form data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    // You would typically use AJAX to send this data to the server
+    // For simplicity, we'll just log the data to the console
+    console.log("Name: ", name);
+    console.log("Email: ", email);
+    console.log("Phone Number: ", phone);
+    console.log("Message: ", message);
+
+    // Here you would make an AJAX request to the server to handle the form data and send an email
+    // Example using fetch:
+    /*
+    fetch('/path/to/server', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            phone: phone,
+            message: message,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => console.log('Success:', data))
+    .catch(error => console.error('Error:', error));
+    */
+} -->
+
+
+<script>
+    function handleDrop(event) {
+        event.preventDefault();
+
+        var fileList = event.dataTransfer.files;
+        updateFileList(fileList);
+    }
+
+    function handleDragOver(event) {
+        event.preventDefault();
+        var dropArea = document.getElementById("drop-area");
+        dropArea.classList.add("drag-over");
+    }
+
+    function updateFileList(files) {
+        var fileListContainer = document.getElementById("file-list");
+
+        for (var i = 0; i < files.length; i++) {
+            var fileItem = document.createElement("div");
+            fileItem.classList.add("file-item");
+
+            var fileName = document.createElement("span");
+            fileName.textContent = files[i].name;
+            fileItem.appendChild(fileName);
+
+            // Display a file preview for images
+            if (files[i].type.startsWith("image/")) {
+                var imgPreview = document.createElement("img");
+                imgPreview.src = URL.createObjectURL(files[i]);
+                imgPreview.style.maxWidth = "100px";
+                imgPreview.style.maxHeight = "100px";
+                fileItem.appendChild(imgPreview);
+            }
+
+            // Add a close button (X) to remove the file
+            var closeBtn = document.createElement("span");
+            closeBtn.textContent = "X";
+            closeBtn.classList.add("close-button");
+            closeBtn.addEventListener("click", function () {
+                fileItem.remove();
+            });
+            fileItem.appendChild(closeBtn);
+
+            fileListContainer.appendChild(fileItem);
+        }
+    }
+
+    // Display the selected files when the user chooses files using the file input
+    document.getElementById("attachments").addEventListener("change", function () {
+        var fileList = this.files;
+        updateFileList(fileList);
+    });
+</script>
