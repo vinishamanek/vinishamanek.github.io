@@ -42,8 +42,11 @@
         
                     <label for="attachments">Attachments:</label>
                     <div id="drop-area" ondrop="handleDrop(event)" ondragover="handleDragOver(event)">
-                        Drop files here or click to select
-                        <input type="file" id="attachments" name="attachments" accept=".pdf, .mp4, .mov, .jpg, .jpeg, .png" multiple>
+                        Drop files here or click to 
+                    <label for="attachments" class="custom-file-button">
+                         <span>Choose File</span>
+                    </label>
+                        <input type="file" id="attachments" name="attachments" accept=".pdf, .mp4, .mov, .jpg, .jpeg, .png" multiple style="display: none;">
                     </div>
                     <p id="file-list"></p>
 
@@ -133,6 +136,13 @@ function submitForm() {
                 imgPreview.src = URL.createObjectURL(files[i]);
                 imgPreview.style.maxWidth = "100px";
                 imgPreview.style.maxHeight = "100px";
+
+                 // Open the image in a larger view when clicking on the small preview
+                 imgPreview.addEventListener("click", function () {
+                    var largerView = window.open("", "_blank");
+                    largerView.document.write("<img src='" + this.src + "' style='max-width:100%; max-height:100%;'>");
+                });
+                
                 fileItem.appendChild(imgPreview);
             }
 
