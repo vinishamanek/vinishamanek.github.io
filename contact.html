@@ -65,47 +65,91 @@
 </body>
 </html>
 
-<!-- js for submit form to send email -->
-<!-- 
-function submitForm() {
-    // You can add client-side validation here if needed
+<script>
 
+function submitForm() {
     // Get form data
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const message = document.getElementById("message").value;
 
-    // You would typically use AJAX to send this data to the server
-    // For simplicity, we'll just log the data to the console
-    console.log("Name: ", name);
-    console.log("Email: ", email);
-    console.log("Phone Number: ", phone);
-    console.log("Message: ", message);
-
-    // Here you would make an AJAX request to the server to handle the form data and send an email
-    // Example using fetch:
-    /*
-    fetch('/path/to/server', {
+    // Make an AJAX request to the Django view
+    fetch('/submit_form/', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'X-CSRFToken': getCookie('csrftoken'), // Include CSRF token
         },
-        body: JSON.stringify({
-            name: name,
-            email: email,
-            phone: phone,
-            message: message,
-        }),
+        body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&message=${encodeURIComponent(message)}`,
     })
     .then(response => response.json())
-    .then(data => console.log('Success:', data))
-    .catch(error => console.error('Error:', error));
-    */
-} -->
+    .then(data => {
+        console.log('Success:', data);
+        // Optionally, you can handle success on the client side
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Optionally, you can handle errors on the client side
+    });
+}
+
+// Function to get the CSRF token from cookies
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            // Check if the cookie name starts with the desired name
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
 
 
-<script>
+// function submitForm() {
+//     // You can add client-side validation here if needed
+
+//     // Get form data
+//     const name = document.getElementById("name").value;
+//     const email = document.getElementById("email").value;
+//     const phone = document.getElementById("phone").value;
+//     const message = document.getElementById("message").value;
+
+//     // You would typically use AJAX to send this data to the server
+//     // For simplicity, we'll just log the data to the console
+//     console.log("Name: ", name);
+//     console.log("Email: ", email);
+//     console.log("Phone Number: ", phone);
+//     console.log("Message: ", message);
+
+//     // Here you would make an AJAX request to the server to handle the form data and send an email
+//     // Example using fetch:
+//     /*
+//     fetch('/path/to/server', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({
+//             name: name,
+//             email: email,
+//             phone: phone,
+//             message: message,
+//         }),
+//     })
+//     .then(response => response.json())
+//     .then(data => console.log('Success:', data))
+//     .catch(error => console.error('Error:', error));
+//     */
+// } 
+
+
     function handleDrop(event) {
         event.preventDefault();
 
@@ -142,7 +186,7 @@ function submitForm() {
                     var largerView = window.open("", "_blank");
                     largerView.document.write("<img src='" + this.src + "' style='max-width:100%; max-height:100%;'>");
                 });
-                
+
                 fileItem.appendChild(imgPreview);
             }
 
